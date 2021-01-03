@@ -1,0 +1,21 @@
+name: "python3-smpp-pdu3"
+arch: "amd64"
+platform: "linux"
+version: "v0.4"
+section: "default"
+priority: "extra"
+maintainer: "Jookies LTD <jasmin@jookies.net>"
+description: "Python3 Library for parsing Protocol Data Units (PDUs) in SMPP protocol"
+vendor: "Roger Hoover"
+homepage: "https://github.com/jookies/smpp.pdu"
+license: "Apache 2"
+replaces:
+  - python3-smpp-pdu3
+provides:
+  - python3-smpp-pdu3
+depends:
+  - python3 (>= 3.7)
+  - python3-pip
+scripts:
+  postinstall: ./misc/packaging/scripts/common-postinstall.sh
+  preremove: ./misc/packaging/scripts/common-preremove.sh

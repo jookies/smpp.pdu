@@ -34,14 +34,12 @@ class SMStringEncoder:
 
         if data_coding.scheme == DataCodingScheme.DEFAULT:
             unicodeStr = None
-            if data_coding.schemeData == DataCodingDefault.SMSC_DEFAULT_ALPHABET:
-                unicodeStr = str(smStrBytes, 'ascii')
-            elif data_coding.schemeData == DataCodingDefault.IA5_ASCII:
-                unicodeStr = str(smStrBytes, 'ascii')
+            if data_coding.schemeData in [DataCodingDefault.SMSC_DEFAULT_ALPHABET, DataCodingDefault.IA5_ASCII]:
+                unicodeStr = smStrBytes.decode('ascii', "replace")
             elif data_coding.schemeData == DataCodingDefault.UCS2:
-                unicodeStr = str(smStrBytes, 'UTF-16BE')
+                unicodeStr = smStrBytes.decode('UTF-16BE', "replace")
             elif data_coding.schemeData == DataCodingDefault.LATIN_1:
-                unicodeStr = str(smStrBytes, 'latin_1')
+                unicodeStr = smStrBytes.decode('latin_1', "replace")
             if unicodeStr is not None:
                 return ShortMessageString(smBytes, unicodeStr, udh)
 

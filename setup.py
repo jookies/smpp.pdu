@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="smpp.pdu3",
-    version="0.5",
+    version="0.6",
     author="Roger Hoover",
     author_email="roger.hoover@gmail.com",
     description="Python3 Library for parsing Protocol Data Units (PDUs) in SMPP protocol",

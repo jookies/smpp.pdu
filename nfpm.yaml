@@ -1,7 +1,7 @@
 name: "python3-smpp-pdu3"
 arch: "amd64"
 platform: "linux"
-version: "v0.5"
+version: "v0.6"
 section: "default"
 priority: "extra"
 maintainer: "Jookies LTD <jasmin@jookies.net>"

@@ -242,6 +242,11 @@ class DeliverSM(PDUDataRequest):
         # it is added for compatibility with some providers (c.f. #120)
         'source_network_type',
         'dest_network_type',
+        # more_messages_to_send must only be in submit_sm and data_sm as
+        # specified in 5.3.2.34 more_messages_to_send
+        # (https://smpp.org/SMPP_v3_4_Issue1_2.pdf)
+        # This is added for compatibility with some providers (c.f. #938)
+        'more_messages_to_send',
         # Avoid raising exceptions when having vendor specific tags, just
         # bypass them
         'vendor_specific_bypass',

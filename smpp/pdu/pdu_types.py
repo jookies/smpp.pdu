@@ -169,8 +169,6 @@ class PDU:
             return False
         if self.status != pdu.status:
             return False
-        print(self.params)
-        print(pdu.params)
         if self.params != pdu.params:
             return False
         return True
